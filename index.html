@@ -74,6 +74,10 @@
             bottom: 0;
             width: 100%;
         }
+
+        input, textarea, button {
+            font-family: Arial, sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -88,17 +92,17 @@
 
     <section id="galeria" class="gallery">
         <div class="bracelet">
-            <img src="https://via.placeholder.com/200x200?text=Pulseira+1" alt="Pulseira 1">
+            <img src="https://images.unsplash.com/photo-1612832020946-c8de979d1a4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cHVsbGVjdGV8fHx8fHwxNjk2MTc4ODQ5&ixlib=rb-4.0.3&q=80&w=400" alt="Pulseira Rosa">
             <h3>Pulseira Rosa</h3>
             <p>Delicada e encantadora.</p>
         </div>
         <div class="bracelet">
-            <img src="https://via.placeholder.com/200x200?text=Pulseira+2" alt="Pulseira 2">
+            <img src="https://images.unsplash.com/photo-1621145193261-fb60a1e1df42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cHVsbGVjdGV8fHx8fHwxNjk2MTc4OTU1&ixlib=rb-4.0.3&q=80&w=400" alt="Pulseira Azul">
             <h3>Pulseira Azul</h3>
             <p>Estilo único e moderno.</p>
         </div>
         <div class="bracelet">
-            <img src="https://via.placeholder.com/200x200?text=Pulseira+3" alt="Pulseira 3">
+            <img src="https://images.unsplash.com/photo-1624772467350-0db3fdf6d95a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cHVsbGVjdGV8fHx8fHwxNjk2MTc4OTYx&ixlib=rb-4.0.3&q=80&w=400" alt="Pulseira Colorida">
             <h3>Pulseira Colorida</h3>
             <p>Perfeita para todos os estilos.</p>
         </div>
@@ -107,10 +111,10 @@
     <section id="contato" style="text-align:center; padding: 30px;">
         <h2>Contato</h2>
         <p>Envie-nos uma mensagem para encomendar sua pulseira dos sonhos!</p>
-        <form>
-            <input type="text" placeholder="Seu nome" required style="padding:10px; margin:5px;">
-            <input type="email" placeholder="Seu email" required style="padding:10px; margin:5px;">
-            <textarea placeholder="Mensagem" required style="padding:10px; margin:5px; width:100%; max-width:400px;"></textarea><br>
+        <form id="contactForm">
+            <input type="text" id="nome" placeholder="Seu nome" required style="padding:10px; margin:5px;"><br>
+            <input type="email" id="email" placeholder="Seu email" required style="padding:10px; margin:5px;"><br>
+            <textarea id="mensagem" placeholder="Mensagem" required style="padding:10px; margin:5px; width:100%; max-width:400px;"></textarea><br>
             <button type="submit" style="padding:10px 20px; margin-top:10px; background-color:#ff5a8a; color:white; border:none; border-radius:5px; cursor:pointer;">
                 Enviar
             </button>
@@ -120,5 +124,24 @@
     <footer>
         &copy; 2025 Biju de Sonho. Todos os direitos reservados.
     </footer>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            // Monta a mensagem para o WhatsApp
+            const whatsappNumber = "5521967800668";
+            const text = Olá! Meu nome é ${nome}. Email: ${email}. Mensagem: ${mensagem};
+            const url = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)};
+
+            // Abre o WhatsApp em nova aba
+            window.open(url, '_blank');
+        });
+    </script>
 </body>
 </html>
