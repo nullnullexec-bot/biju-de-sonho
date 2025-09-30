@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biju de Sonho</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ffdee9, #b5fffc);
+            color: #333;
+        }
+
+        header {
+            background-color: #ff85a2;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-family: 'Cursive', sans-serif;
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ff5a8a;
+            font-weight: bold;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .bracelet {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 15px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .bracelet:hover {
+            transform: scale(1.05);
+        }
+
+        .bracelet img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #ff85a2;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Biju de Sonho</h1>
+    </header>
+
+    <nav>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section id="galeria" class="gallery">
+        <div class="bracelet">
+            <img src="https://via.placeholder.com/200x200?text=Pulseira+1" alt="Pulseira 1">
+            <h3>Pulseira Rosa</h3>
+            <p>Delicada e encantadora.</p>
+        </div>
+        <div class="bracelet">
+            <img src="https://via.placeholder.com/200x200?text=Pulseira+2" alt="Pulseira 2">
+            <h3>Pulseira Azul</h3>
+            <p>Estilo único e moderno.</p>
+        </div>
+        <div class="bracelet">
+            <img src="https://via.placeholder.com/200x200?text=Pulseira+3" alt="Pulseira 3">
+            <h3>Pulseira Colorida</h3>
+            <p>Perfeita para todos os estilos.</p>
+        </div>
+    </section>
+
+    <section id="contato" style="text-align:center; padding: 30px;">
+        <h2>Contato</h2>
+        <p>Envie-nos uma mensagem para encomendar sua pulseira dos sonhos!</p>
+        <form>
+            <input type="text" placeholder="Seu nome" required style="padding:10px; margin:5px;">
+            <input type="email" placeholder="Seu email" required style="padding:10px; margin:5px;">
+            <textarea placeholder="Mensagem" required style="padding:10px; margin:5px; width:100%; max-width:400px;"></textarea><br>
+            <button type="submit" style="padding:10px 20px; margin-top:10px; background-color:#ff5a8a; color:white; border:none; border-radius:5px; cursor:pointer;">
+                Enviar
+            </button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 Biju de Sonho. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
